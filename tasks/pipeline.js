@@ -8,7 +8,11 @@
  * for matching multiple files.)
  */
 
-
+// BROWSERIFY main file path
+// Browserify task work before copying the files in the .tmp folder
+// so the path sould be something like .tmp/public/js/app.js
+// just change assets/ for .tmp/public/ and then the same path as alway
+var browserifyMainFile = '.tmp/public/js/app.js';
 
 // CSS files to inject in order
 //
@@ -22,7 +26,7 @@ var cssFilesToInject = [
 // Client-side javascript files to inject in order
 // (uses Grunt-style wildcard/glob/splat expressions)
 var jsFilesToInject = [
-  
+
   // Load sails.io before everything else
   'js/dependencies/sails.io.js',
 
@@ -41,7 +45,7 @@ var jsFilesToInject = [
 //
 // By default, Sails uses JST templates and precompiles them into
 // functions for you.  If you want to use jade, handlebars, dust, etc.,
-// with the linker, no problem-- you'll just want to make sure the precompiled
+// with the linker, no problem-- yu'll just want to make sure the precompiled
 // templates get spit out to the same file.  Be sure and check out `tasks/README.md`
 // for information on customizing and installing new tasks.
 var templateFilesToInject = [
@@ -62,3 +66,5 @@ module.exports.jsFilesToInject = jsFilesToInject.map(function(path) {
 module.exports.templateFilesToInject = templateFilesToInject.map(function(path) {
   return 'assets/' + path;
 });
+// Browserify main file path
+module.exports.browserifyMainFile = browserifyMainFile;
