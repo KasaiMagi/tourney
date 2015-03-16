@@ -1,0 +1,6 @@
+{
+  "name": "tourney",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation"
+  }
+}

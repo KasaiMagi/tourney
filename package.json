@@ -42,5 +42,9 @@
     "url": "git://github.com/tbishop/tourney.git"
   },
   "author": "tbishop",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "grunt-sass": "^0.18.1",
+    "node-sass": "^3.0.0-pre"
+  }
 }
